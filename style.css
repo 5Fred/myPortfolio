@@ -1,8 +1,10 @@
-/* DESIGN CONSTANTS & BASE LAYOUT */
+/* ==========================================================================
+   1. CORE DESIGN VARIABLES & TYPOGRAPHY BASE
+   ========================================================================== */
 :root {
     --bg-dark: #0a0a0f;
     --bg-card: #12121a;
-    --border-color: rgba(255, 255, 255, 0.08);
+    --border-color: rgba(255, 255, 255, 0.06);
     --text-main: #e2e8f0;
     --text-muted: #94a3b8;
     --accent-blue: #3498db;
@@ -19,16 +21,19 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    letter-spacing: -0.01em;
 }
 
-/* NAVBAR DESIGN */
+/* ==========================================================================
+   2. INTERACTIVE HEADER & LOGO CONFIG
+   ========================================================================== */
 .navbar {
     position: sticky;
     top: 0;
     z-index: 100;
     background: rgba(10, 10, 15, 0.7);
     backdrop-filter: blur(12px);
-    border-b: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,14 +53,16 @@ body {
     margin-left: 1.5rem;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: color 0.2s;
+    transition: color 0.2s ease;
 }
 
 .navbar nav a:hover {
     color: white;
 }
 
-/* CONTAINER */
+/* ==========================================================================
+   3. CORE STRUCTURAL GRID WRAPPERS
+   ========================================================================== */
 .container {
     max-width: 900px;
     margin: 4rem auto;
@@ -63,10 +70,20 @@ body {
 }
 
 .section-block {
-    margin-top: 5rem;
+    margin-top: 6rem;
 }
 
-/* HERO SECTION */
+.section-heading {
+    font-size: 1.5rem;
+    color: white;
+    border-left: 2px solid var(--accent-blue);
+    padding-left: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   4. HERO SPOTLIGHT MODULE
+   ========================================================================== */
 .status-badge {
     inline-size: max-content;
     display: flex;
@@ -89,32 +106,26 @@ body {
 }
 
 .hero-title {
-    font-size: 2.8rem;
+    font-size: 3rem;
     font-weight: 800;
     color: white;
-    line-height: 1.2;
+    line-height: 1.15;
     margin: 1.5rem 0 1rem 0;
+    letter-spacing: -0.03em;
 }
 
 .hero-subtitle {
     color: var(--text-muted);
-    font-size: 1.1rem;
-    max-width: 700px;
+    font-size: 1.15rem;
+    max-width: 720px;
 }
 
-/* CORE HEADINGS */
-.section-heading {
-    font-size: 1.5rem;
-    color: white;
-    border-left: 2px solid var(--accent-blue);
-    padding-left: 0.75rem;
-    margin-bottom: 1.5rem;
-}
-
-/* FLEXIBLE RESPONSIVE GRID MATRIX */
+/* ==========================================================================
+   5. DEPLOYMENT MATRIX & TECHNICAL BADGES
+   ========================================================================== */
 .grid-layout {
     display: grid;
-    gap: 1.25rem;
+    gap: 1.5rem;
 }
 
 .tools-grid {
@@ -125,13 +136,13 @@ body {
     grid-template-columns: repeat(2, 1fr);
 }
 
-/* CARD MODULE */
+/* STANDALONE CARD BLUEPRINT */
 .card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
-    padding: 1.25rem;
+    padding: 1.5rem;
     border-radius: 12px;
-    transition: border 0.2s, transform 0.2s;
+    transition: border 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
@@ -141,7 +152,7 @@ body {
 .card h3 {
     margin: 0 0 0.5rem 0;
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
 }
 
 .card p {
@@ -150,7 +161,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* PROJECT SPECIFIC TAGS */
+/* INTERACTION SPECIFIC TAGS */
 .tags {
     display: flex;
     gap: 0.5rem;
@@ -161,20 +172,109 @@ body {
     font-family: monospace;
     font-size: 0.75rem;
     color: #64748b;
-    background: rgba(255,255,255,0.03);
-    padding: 0.1rem 0.4rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.1rem 0.5rem;
     border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
 }
 
-/* SMART PHONE MEDIA OVERRIDES (RESPONSIVENESS) */
+/* ==========================================================================
+   6. PREMIUM GATEWAY CHANNELS (GLOW ENGINE)
+   ========================================================================== */
+.contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-card {
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.contact-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.contact-card p {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.arrow-icon {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-2px);
+}
+
+.contact-card:hover .arrow-icon {
+    transform: translateX(6px);
+}
+
+/* WHATSAPP */
+.whatsapp-link:hover {
+    border-color: #25d366;
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.08);
+}
+.whatsapp-link:hover .arrow-icon { color: #25d366; }
+
+/* INSTAGRAM */
+.instagram-link:hover {
+    border-color: #f15bb5;
+    box-shadow: 0 0 20px rgba(241, 91, 181, 0.08);
+}
+.instagram-link:hover .arrow-icon { color: #f15bb5; }
+
+/* LINKEDIN */
+.linkedin-link:hover {
+    border-color: #0077b5;
+    box-shadow: 0 0 20px rgba(0, 119, 181, 0.08);
+}
+.linkedin-link:hover .arrow-icon { color: #0077b5; }
+
+/* GITHUB */
+.github-link:hover {
+    border-color: #ffffff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+}
+.github-link:hover .arrow-icon { color: #ffffff; }
+
+/* GMAIL */
+.gmail-link:hover {
+    border-color: #ea4335;
+    box-shadow: 0 0 20px rgba(234, 67, 53, 0.08);
+}
+.gmail-link:hover .arrow-icon { color: #ea4335; }
+
+/* ==========================================================================
+   7. BREAKPOINT SCHEDULING (RESPONSIVENESS RESIZE OVERRIDES)
+   ========================================================================== */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
     .tools-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-grid {
         grid-template-columns: 1fr;
     }
 }
