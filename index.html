@@ -3,107 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Portfolio</title>
+    <title>Fredrick Mwangi | Full-Stack Systems Engineer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <div class="ambient-glow-backdrop"></div>
+
     <header class="navbar">
-        <div class="logo">DEVELOPER.PROFILE</div>
+        <div class="logo">Port<span class="logo-dot">folio</span></div>
         <nav>
-            <a href="#about">About</a>
-            <a href="#stack">Stack</a>
+            <a href="#about" class="active">Home</a>
+            <a href="#expertise">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <main class="container">
 
-        <section id="about" class="hero-section">
-            <div class="status-badge">
-                <span class="pulse-dot"></span> Available for new opportunities
+        <section id="about" class="hero-split-deck">
+            <div class="hero-left-content">
+                <span class="brand-tag">// FULL-STACK SOFTWARE DEVELOPER</span>
+                <h1 class="hero-title">Hello, I'm <span class="glow-green-text">Fredrick.</span><br>Deploying High-Performance <br>Web Infrastructures</h1>
+                <p class="hero-subtitle">Full-stack software developer focused on bridging the gap between bulletproof backend servers and high-fidelity front-end interfaces. Dedicated to clean execution and architectural integrity.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="cta-neon-btn">Let's connect</a>
+                </div>
             </div>
-            <h1 class="hero-title">Building robust, scalable applications across the full stack.</h1>
-            <p class="hero-subtitle">Hi, I'm a software engineer focused on architecting clean, efficient systems—from fluid front-end interfaces to performance-optimized back-ends and databases.</p>
-        </section>
+            
+         <div class="hero-right-display">
+                <div class="avatar-glow-ring">
+                    <img src="profile.jpg" alt="Fredrick Mwangi" class="profile-img">
+                </div>
+            </div>
+        </section>  
+            
 
-        <section id="stack" class="section-block">
-            <h2 class="section-heading">Technical Toolkit</h2>
-            <div class="grid-layout tools-grid">
-                <div class="card">
-                    <h3>Languages</h3>
-                    <p>JavaScript, PHP, Java, SQL</p>
+        <div class="metrics-performance-bar">
+            <div class="metric-block">
+                <div class="metric-number">2+</div>
+                <div class="metric-label">Years of<br>experience</div>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-block">
+                <div class="metric-number">15+</div>
+                <div class="metric-label">Projects<br>completed</div>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-block">
+                <div class="metric-number">8+</div>
+                <div class="metric-label">Technologies<br>mastered</div>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-block">
+                <div class="metric-number">100%</div>
+                <div class="metric-label">System<br>Uptime</div>
+            </div>
+        </div>
+
+        <section id="expertise" class="section-block">
+            <h2 class="section-heading">Technical Expertise</h2>
+            <div class="grid-layout expertise-grid">
+                
+                <div class="card expertise-card">
+                    <div class="card-icon-tag">💻</div>
+                    <h3>Application & Website Dev</h3>
+                    <p>Architecting secure, monolithic systems and production-ready architectures built on scalable MVC models using Laravel PHP.</p>
                 </div>
-                <div class="card">
-                    <h3>Front-End</h3>
-                    <p>React, Tailwind CSS, HTML5/CSS3</p>
+
+                <div class="card expertise-card">
+                    <div class="card-icon-tag">&lt;/&gt;</div>
+                    <h3>Frontend Engineering</h3>
+                    <p>Designing deeply reactive UI environments using React.js and modern layout engines integrated smoothly into live data streams.</p>
                 </div>
-                <div class="card">
-                    <h3>Back-End</h3>
-                    <p>Node.js, Express, Laravel</p>
+
+                <div class="card expertise-card">
+                    <div class="card-icon-tag">🎨</div>
+                    <h3>UI/UX & Systems Layout</h3>
+                    <p>Mapping structured wireframes, dynamic interactive component patterns, and aesthetic, high-fidelity dark mode interfaces.</p>
                 </div>
-                <div class="card">
-                    <h3>Environment</h3>
-                    <p>Ubuntu Linux, MySQL, Git</p>
-                </div>
+
             </div>
         </section>
 
         <section id="projects" class="section-block">
             <h2 class="section-heading">Featured Deployments</h2>
             <div class="grid-layout projects-grid">
+                
                 <div class="card project-card">
-                    <h3>Full-Stack Entertainment Platform</h3>
-                    <p>A streaming discoverability application integrating external REST APIs, tracking engagement pipelines, and managing user profiles.</p>
-                    <div class="tags"><span>React</span><span>Node.js</span><span>SQLite</span></div>
+                    <span class="sys-label">LIVE DATA SYSTEM // RECONSTRUCTED</span>
+                    <h3>Aesthetic Recipe Finder Hub</h3>
+                    <p>A sleek, dynamic recipe discovery application built with high-fidelity styling. Interconnects with professional REST APIs (TheMealDB, Edamam) to filter data schemas, handle dynamic search queries, and manage client favorites workflows.</p>
+                    <div class="tech-tags"><span>React.js</span><span>REST APIs</span><span>Modern CSS</span></div>
                 </div>
+
                 <div class="card project-card">
-                    <h3>Relational Inventory System</h3>
-                    <p>A high-throughput stock and supply management desk client bound directly to secure transaction layers.</p>
-                    <div class="tags"><span>Java</span><span>MySQL</span><span>JDBC</span></div>
+                    <span class="sys-label">RELATIONAL DATABASE LAYER</span>
+                    <h3>High-Throughput Inventory Hub</h3>
+                    <p>An enterprise-tier desktop software core engineered with Java database abstractions (JDBC), bound to reliable local MySQL data layers to streamline stock transactions securely.</p>
+                    <div class="tech-tags"><span>Java SE</span><span>MySQL Core</span><span>Ubuntu Linux</span></div>
                 </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="section-block terminal-gateways-wrapper">
+            <h2 class="section-heading">Terminal Gateways</h2>
+            <div class="grid-layout footer-socials-grid">
+                
+                <a href="https://wa.me/254711282366" target="_blank" class="card social-footer-card whatsapp-glow">
+                    <span class="social-tag">01 // TELECOM</span>
+                    <h3>WhatsApp</h3>
+                    <p>+254 711 282366</p>
+                    <span class="arrow-indicator">→</span>
+                </a>
+
+                <a href="https://instagram.com/maxy.be.rolling" target="_blank" class="card social-footer-card instagram-glow">
+                    <span class="social-tag">02 // SOCIAL</span>
+                    <h3>Instagram</h3>
+                    <p>@maxy.be.rolling</p>
+                    <span class="arrow-indicator">→</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/fredrick-mwangi-7160982ba/" target="_blank" class="card social-footer-card linkedin-glow">
+                    <span class="social-tag">03 // PROFESSIONAL</span>
+                    <h3>LinkedIn</h3>
+                    <p>Fredrick Mwangi</p>
+                    <span class="arrow-indicator">→</span>
+                </a>
+
+                <a href="https://github.com/5Fred" target="_blank" class="card social-footer-card github-glow">
+                    <span class="social-tag">04 // REPOS</span>
+                    <h3>GitHub</h3>
+                    <p>github.com/5Fred</p>
+                    <span class="arrow-indicator">→</span>
+                </a>
+
+                <a href="mailto:mwangikings94@gmail.com" class="card social-footer-card gmail-glow">
+                    <span class="social-tag">05 // SECURE MAIL</span>
+                    <h3>Direct Mail</h3>
+                    <p>mwangikings94@gmail.com</p>
+                    <span class="arrow-indicator">→</span>
+                </a>
+
             </div>
         </section>
 
     </main>
 
-    <section id="contact" class="section-block">
-            <h2 class="section-heading">Connect</h2>
-            <div class="grid-layout contact-grid">
-                
-                <a href="https://wa.me/254711282366" target="_blank" class="card contact-card whatsapp-link">
-                    <h3>WhatsApp</h3>
-                    <p>+254 711 282366</p>
-                    <span class="arrow-icon">→</span>
-                </a>
+    <footer class="system-footer">
+        <p>© 2026 Systems Engineering. All operations active.</p>
+    </footer>
 
-                <a href="https://instagram.com/maxy.be.rolling" target="_blank" class="card contact-card instagram-link">
-                    <h3>Instagram</h3>
-                    <p>@maxy.be.rolling</p>
-                    <span class="arrow-icon">→</span>
-                </a>
-
-                <a href="https://www.linkedin.com/in/fredrick-mwangi-7160982ba/" target="_blank" class="card contact-card linkedin-link">
-                    <h3>LinkedIn</h3>
-                    <p>Fredrick Mwangi</p>
-                    <span class="arrow-icon">→</span>
-                </a>
-
-                <a href="https://github.com/5Fred" target="_blank" class="card contact-card github-link">
-                    <h3>GitHub Profile</h3>
-                    <p>github.com/5Fred</p>
-                    <span class="arrow-icon">→</span>
-                </a>
-
-                <a href="mailto:mwangikings94@gmail.com" class="card contact-card gmail-link">
-                    <h3>Direct Email</h3>
-                    <p>mwangikingz94@gmail.com</p>
-                    <span class="arrow-icon">→</span>
-                </a>
-
-            </div>
-        </section>
-
-    <script src="script.js"></script>
 </body>
 </html>
